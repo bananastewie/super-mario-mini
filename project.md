@@ -12,8 +12,8 @@ Spielbarer Super-Mario-Klon im Browser. Ein Level, klassische Plattformer-Mechan
 ## Tagesplan (4 Nächte)
 
 ### Nacht 1 — Fundament
-- [ ] Phaser 3 + TypeScript + Vite Projekt-Setup
-- [ ] Mario-Figur (Rechteck als Placeholder, später Sprite)
+- [x] Phaser 3 + TypeScript + Vite Projekt-Setup
+- [x] Mario-Figur (Rechteck als Placeholder, später Sprite)
 - [ ] Links/rechts bewegen, Sprung (Spacebar / Arrow Keys)
 - [ ] Boden und Plattform-Kollision
 - [ ] Kamera folgt Mario
