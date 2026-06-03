@@ -12,43 +12,43 @@ Spielbarer Super-Mario-Klon im Browser. Ein Level, klassische Plattformer-Mechan
 ## Tagesplan (4 Nächte)
 
 ### Nacht 1 — Fundament
-- Phaser 3 + TypeScript + Vite Projekt-Setup
-- Mario-Figur (Rechteck als Placeholder, später Sprite)
-- Links/rechts bewegen, Sprung (Spacebar / Arrow Keys)
-- Boden und Plattform-Kollision
-- Kamera folgt Mario
+- [ ] Phaser 3 + TypeScript + Vite Projekt-Setup
+- [ ] Mario-Figur (Rechteck als Placeholder, später Sprite)
+- [ ] Links/rechts bewegen, Sprung (Spacebar / Arrow Keys)
+- [ ] Boden und Plattform-Kollision
+- [ ] Kamera folgt Mario
 
 **Definition of Done:** Mario läuft und springt auf Plattformen.
 
 ---
 
 ### Nacht 2 — Gameplay
-- Goomba-Gegner (laufen hin und her, fallen von Kanten)
-- Stomp-Mechanik (Draufspringen = Goomba stirbt)
-- Seitenkollision mit Goomba = Mario verliert Leben
-- Münzen sammeln (Collectibles auf Plattformen)
-- Tod durch Fallgrube
+- [ ] Goomba-Gegner (laufen hin und her, fallen von Kanten)
+- [ ] Stomp-Mechanik (Draufspringen = Goomba stirbt)
+- [ ] Seitenkollision mit Goomba = Mario verliert Leben
+- [ ] Münzen sammeln (Collectibles auf Plattformen)
+- [ ] Tod durch Fallgrube
 
 **Definition of Done:** Gegner, Münzen und Tod funktionieren.
 
 ---
 
 ### Nacht 3 — Level & UI
-- Vollständiges Level-Design (Plattformen, Lücken, Gegner, Münzen)
-- HUD: Münz-Zähler, Leben, Timer
-- Ziel-Flagge am Level-Ende
-- Start-Screen, Game-Over-Screen, Win-Screen
+- [ ] Vollständiges Level-Design (Plattformen, Lücken, Gegner, Münzen)
+- [ ] HUD: Münz-Zähler, Leben, Timer
+- [ ] Ziel-Flagge am Level-Ende
+- [ ] Start-Screen, Game-Over-Screen, Win-Screen
 
 **Definition of Done:** Vollständig spielbares Level mit Anfang und Ende.
 
 ---
 
 ### Nacht 4 — Polish
-- Pixel-Art Sprites (Mario, Goomba, Münze, Plattform)
-- Sprung-Sound, Münz-Sound, Tod-Sound
-- Hintergrundmusik
-- Animationen (Walk-Cycle, Sprung)
-- Bugfixes & Balancing
+- [ ] Pixel-Art Sprites (Mario, Goomba, Münze, Plattform)
+- [ ] Sprung-Sound, Münz-Sound, Tod-Sound
+- [ ] Hintergrundmusik
+- [ ] Animationen (Walk-Cycle, Sprung)
+- [ ] Bugfixes & Balancing
 
 **Definition of Done:** Sieht gut aus, fühlt sich gut an.
 
