@@ -3,6 +3,9 @@
 Ein browser-basierter Super Mario Klon, gebaut mit Phaser 3 + TypeScript + Vite.
 Entwickelt von einem autonomen Claude-Nacht-Agenten.
 
+> **Der Agent läuft in Anthropics Cloud** — unabhängig davon, ob dein Computer an oder aus ist.
+> Er startet täglich um **18:00 Uhr Berlin** automatisch und implementiert die nächste offene Aufgabe aus `project.md`.
+
 ---
 
 ## Projektstatus überprüfen
@@ -57,8 +60,28 @@ Auf derselben Seite: Routine löschen.
 
 ## Agenten wieder aktivieren
 
-Auf der Routine-Seite den Schalter auf **Enabled** setzen.
-Der Agent läuft dann wieder jeden Abend 18–06 Uhr.
+Der Agent wird automatisch deaktiviert wenn das monatliche Token-Budget aufgebraucht ist.
+
+**So schaltest du ihn wieder ein:**
+
+1. Öffne die Routine-Seite:
+   ```
+   https://claude.ai/code/routines/trig_01DjpNPVLKdpy8buSpVHxDUp
+   ```
+2. Setze den Schalter auf **Enabled**
+3. Optional: Klicke **Run now** um sofort eine Session zu starten, ohne auf 18:00 Uhr zu warten
+
+**Alternativ über Claude Code CLI** (im Terminal):
+```
+! claude
+```
+Dann eintippen:
+```
+/schedule
+```
+→ Dort "Super Mario Mini — Nacht-Agent" auswählen und aktivieren.
+
+Der Agent läuft dann wieder täglich um **18:00 Uhr Berlin**.
 
 ---
 
