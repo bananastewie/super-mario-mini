@@ -1,5 +1,7 @@
 import Phaser from 'phaser';
+import { MenuScene } from './scenes/MenuScene';
 import { GameScene } from './scenes/GameScene';
+import { GameOverScene } from './scenes/GameOverScene';
 
 const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
@@ -10,7 +12,7 @@ const config: Phaser.Types.Core.GameConfig = {
     default: 'arcade',
     arcade: { gravity: { x: 0, y: 800 }, debug: false },
   },
-  scene: [GameScene],
+  scene: [MenuScene, GameScene, GameOverScene],
 };
 
 new Phaser.Game(config);

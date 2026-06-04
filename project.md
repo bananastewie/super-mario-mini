@@ -14,30 +14,30 @@ Spielbarer Super-Mario-Klon im Browser. Ein Level, klassische Plattformer-Mechan
 ### Nacht 1 — Fundament
 - [x] Phaser 3 + TypeScript + Vite Projekt-Setup
 - [x] Mario-Figur (Rechteck als Placeholder, später Sprite)
-- [ ] Links/rechts bewegen, Sprung (Spacebar / Arrow Keys)
-- [ ] Boden und Plattform-Kollision
-- [ ] Kamera folgt Mario
+- [x] Links/rechts bewegen, Sprung (Spacebar / Arrow Keys)
+- [x] Boden und Plattform-Kollision
+- [x] Kamera folgt Mario
 
 **Definition of Done:** Mario läuft und springt auf Plattformen.
 
 ---
 
 ### Nacht 2 — Gameplay
-- [ ] Goomba-Gegner (laufen hin und her, fallen von Kanten)
-- [ ] Stomp-Mechanik (Draufspringen = Goomba stirbt)
-- [ ] Seitenkollision mit Goomba = Mario verliert Leben
-- [ ] Münzen sammeln (Collectibles auf Plattformen)
-- [ ] Tod durch Fallgrube
+- [x] Goomba-Gegner (laufen hin und her, fallen von Kanten)
+- [x] Stomp-Mechanik (Draufspringen = Goomba stirbt)
+- [x] Seitenkollision mit Goomba = Mario verliert Leben
+- [x] Münzen sammeln (Collectibles auf Plattformen)
+- [x] Tod durch Fallgrube
 
 **Definition of Done:** Gegner, Münzen und Tod funktionieren.
 
 ---
 
 ### Nacht 3 — Level & UI
-- [ ] Vollständiges Level-Design (Plattformen, Lücken, Gegner, Münzen)
-- [ ] HUD: Münz-Zähler, Leben, Timer
-- [ ] Ziel-Flagge am Level-Ende
-- [ ] Start-Screen, Game-Over-Screen, Win-Screen
+- [x] Vollständiges Level-Design (Plattformen, Lücken, Gegner, Münzen)
+- [x] HUD: Münz-Zähler, Leben, Timer
+- [x] Ziel-Flagge am Level-Ende
+- [x] Start-Screen, Game-Over-Screen, Win-Screen
 
 **Definition of Done:** Vollständig spielbares Level mit Anfang und Ende.
 
