@@ -33,46 +33,96 @@ export class GameScene extends Phaser.Scene {
   private makeTextures(): void {
     const g = this.make.graphics({});
 
-    // Mario: red cap + blue overalls
-    g.fillStyle(0xff2200); g.fillRect(0, 0, 32, 48);
-    g.fillStyle(0x0033cc); g.fillRect(2, 24, 28, 24);
-    g.fillStyle(0xffcc88); g.fillRect(6, 6, 20, 16);
-    g.fillStyle(0xff2200); g.fillRect(4, 0, 24, 10); // cap brim
+    // ── Penguin Mario (32×48) ──────────────────────────────────────────────
+    // feet
+    g.fillStyle(0xff8800); g.fillRect(2, 42, 12, 6); g.fillRect(18, 42, 12, 6);
+    // body — black
+    g.fillStyle(0x111122); g.fillEllipse(16, 30, 28, 30);
+    // white belly
+    g.fillStyle(0xffffff); g.fillEllipse(16, 32, 16, 20);
+    // flipper arms
+    g.fillStyle(0x111122); g.fillEllipse(4, 28, 10, 18); g.fillEllipse(28, 28, 10, 18);
+    // head — black
+    g.fillStyle(0x111122); g.fillCircle(16, 12, 12);
+    // white face patch
+    g.fillStyle(0xffffff); g.fillEllipse(16, 14, 13, 11);
+    // eyes
+    g.fillStyle(0xffffff); g.fillCircle(12, 9, 3); g.fillCircle(20, 9, 3);
+    g.fillStyle(0x111122); g.fillCircle(13, 9, 2); g.fillCircle(21, 9, 2);
+    g.fillStyle(0xffffff); g.fillCircle(14, 8, 1); g.fillCircle(22, 8, 1);
+    // beak
+    g.fillStyle(0xff8800); g.fillTriangle(12, 14, 20, 14, 16, 19);
+    // blue scarf
+    g.fillStyle(0x2255ff); g.fillRect(6, 20, 20, 4);
     g.generateTexture('mario', 32, 48);
     g.clear();
 
-    // Goomba: brown oval body
-    g.fillStyle(0x8b4513); g.fillRect(0, 6, 32, 26);
-    g.fillStyle(0x8b4513); g.fillEllipse(16, 12, 32, 18);
-    g.fillStyle(0xffcc88); g.fillRect(3, 18, 10, 8);
-    g.fillStyle(0xffcc88); g.fillRect(19, 18, 10, 8);
+    // ── Goomba: angry mushroom (32×32) ─────────────────────────────────────
+    // cap — dark red with spots
+    g.fillStyle(0xcc2200); g.fillEllipse(16, 10, 30, 18);
+    g.fillStyle(0xffffff); g.fillCircle(10, 8, 3); g.fillCircle(22, 7, 2); g.fillCircle(18, 13, 2);
+    // body — beige
+    g.fillStyle(0xd4a070); g.fillRect(4, 16, 24, 14);
+    g.fillStyle(0xd4a070); g.fillEllipse(16, 17, 26, 8);
+    // angry eyes
+    g.fillStyle(0xffffff); g.fillCircle(10, 18, 4); g.fillCircle(22, 18, 4);
+    g.fillStyle(0x111111); g.fillCircle(11, 19, 2); g.fillCircle(23, 19, 2);
+    // eyebrow frown
+    g.fillStyle(0x111111); g.fillRect(6, 14, 8, 2); g.fillRect(18, 14, 8, 2);
+    // feet
+    g.fillStyle(0x8b4513); g.fillRect(4, 28, 10, 4); g.fillRect(18, 28, 10, 4);
     g.generateTexture('goomba', 32, 32);
     g.clear();
 
-    // Coin: gold circle
+    // ── Coin: shiny gold (16×16) ────────────────────────────────────────────
     g.fillStyle(0xffd700); g.fillCircle(8, 8, 8);
-    g.fillStyle(0xffaa00); g.fillCircle(8, 8, 5);
+    g.fillStyle(0xffe866); g.fillCircle(6, 6, 4);
+    g.fillStyle(0xcc9900); g.fillCircle(10, 10, 3);
+    g.fillStyle(0xffee99); g.fillCircle(5, 5, 2);
     g.generateTexture('coin', 16, 16);
     g.clear();
 
-    // Ground tile: green top, brown body
-    g.fillStyle(0x228b22); g.fillRect(0, 0, 32, 8);
-    g.fillStyle(0x8b4513); g.fillRect(0, 8, 32, 24);
-    g.fillStyle(0x196b19); g.fillRect(0, 0, 32, 4);
+    // ── Ground tile (32×32) — grass top, dirt body ──────────────────────────
+    // dirt
+    g.fillStyle(0x8b5e2a); g.fillRect(0, 0, 32, 32);
+    // dirt texture specks
+    g.fillStyle(0x7a5020); g.fillRect(4, 10, 4, 3); g.fillRect(16, 18, 5, 3); g.fillRect(24, 8, 3, 4);
+    g.fillStyle(0xa07040); g.fillRect(8, 20, 3, 3); g.fillRect(20, 12, 4, 2);
+    // grass layer
+    g.fillStyle(0x2ecc40); g.fillRect(0, 0, 32, 8);
+    // grass highlight
+    g.fillStyle(0x55ee55); g.fillRect(0, 0, 32, 3);
+    // grass blades
+    g.fillStyle(0x22aa30);
+    g.fillRect(4, 2, 2, 4); g.fillRect(10, 1, 2, 5); g.fillRect(18, 2, 2, 4); g.fillRect(26, 1, 2, 5);
+    // tile border
+    g.lineStyle(1, 0x5a3a10, 0.4); g.strokeRect(0, 0, 32, 32);
     g.generateTexture('ground', 32, 32);
     g.clear();
 
-    // Platform tile: brick yellow
-    g.fillStyle(0xc8a000); g.fillRect(0, 0, 32, 16);
-    g.fillStyle(0xffe040); g.fillRect(2, 2, 28, 5);
-    g.fillStyle(0xa07800); g.fillRect(0, 0, 1, 16);
-    g.fillStyle(0xa07800); g.fillRect(31, 0, 1, 16);
+    // ── Platform tile (32×16) — brick ───────────────────────────────────────
+    g.fillStyle(0xb05020); g.fillRect(0, 0, 32, 16);
+    // mortar lines
+    g.fillStyle(0xd4956a); g.fillRect(1, 1, 14, 6); g.fillRect(17, 1, 14, 6);
+    g.fillStyle(0xd4956a); g.fillRect(1, 9, 30, 6);
+    // highlight top edge
+    g.fillStyle(0xe8a882); g.fillRect(1, 1, 14, 2); g.fillRect(17, 1, 14, 2);
+    g.fillStyle(0xe8a882); g.fillRect(1, 9, 30, 2);
+    // shadow
+    g.fillStyle(0x7a3010); g.fillRect(0, 14, 32, 2);
     g.generateTexture('platform', 32, 16);
     g.clear();
 
-    // Flag pole + flag
-    g.fillStyle(0xaaaaaa); g.fillRect(12, 0, 6, 120);
-    g.fillStyle(0xff0000); g.fillTriangle(18, 4, 18, 44, 54, 24);
+    // ── Flag pole (60×120) ──────────────────────────────────────────────────
+    // pole
+    g.fillStyle(0xcccccc); g.fillRect(13, 0, 5, 120);
+    g.fillStyle(0xeeeeee); g.fillRect(14, 0, 2, 120);
+    // flag
+    g.fillStyle(0xff2200); g.fillRect(18, 4, 30, 14);
+    g.fillStyle(0xffffff); g.fillRect(18, 18, 30, 14);
+    g.fillStyle(0xff2200); g.fillRect(18, 32, 30, 8);
+    // pole top ball
+    g.fillStyle(0xffdd00); g.fillCircle(15, 3, 5);
     g.generateTexture('flagpole', 60, 120);
 
     g.destroy();
